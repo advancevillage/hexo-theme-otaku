@@ -1,0 +1,19 @@
+<div class="logo">
+    <div class="logoimg">
+        <img src="/images/logo96.png" alt="logo"/>
+        <% if(theme.motto) { %>
+            <div class="motto"><b><%= theme.motto %></b></div>
+        <% } %>
+    </div>    
+</div>
+<nav class="site_nav">
+    <% if(theme.menu) { %>
+        <ul>
+            <% for(var name in theme.menu) { %> 
+                <li class="site_nav_item site_nav_item_<%= name%>">
+                    <a href="<%- url_for(theme.menu[name])%>"><%= name%></a>
+                </li>
+            <% } %>
+        </ul>
+    <% } %>
+</nav>

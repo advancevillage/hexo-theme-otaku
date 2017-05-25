@@ -1,0 +1,18 @@
+#LOGO
+favicon: /favicon/favicon.png
+
+#motto
+motto: Make the world better
+
+#menu
+menu:
+	home: /
+	tags: /tags
+	archives: /archives
+	categories: /categories
+	
+#since
+since: 2016
+
+#content
+excerpt_link: more

@@ -1,0 +1,14 @@
+menu:
+	home: 首页
+	categories: 分类
+	tags: 标签
+	archives: 时光轴
+	
+copy:
+	declare: 版权归原作者所有 
+	author: 作者
+	
+	
+indexpage:
+	prev: 上一页
+	next: 下一页
