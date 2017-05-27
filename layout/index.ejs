@@ -1,11 +1,33 @@
 <div class="wrapper">
-    <div class="rightsidebar">
-        rightsidebar
-    </div>
-    <div class="leftsidebar">
-        leftsidebar
-    </div>
+    <div class="rightsidebar"></div>
+    <div class="leftsidebar"></div>
     <div class="main">
-        main
+        <% page.posts.each(function(post){ %>
+            <article class="article">
+                <header class="header">
+                    <p><%= post.title%></p>
+                    <ul>
+                        <li class="articledate"><%- date(post.date, 'YYYY-MM-DD') %></li>
+                        <li class="articletag"><% post.tags.each(function(tag){ %> <%= tag.name %> <% }) %></li>
+                        <li class="articlecategory"><% post.categories.each(function(category){ %> <%= category.name %> <% }) %></li>
+                    </ul>  
+                </header>
+                <section class="section">
+                    <%= post.excerpt %>
+                </section>
+                <footer class="footer">
+                    <% if(theme.excerpt_link) { %> 
+                        <p class="arrow"><%= theme.excerpt_link%></p>
+                    <% } else { %>
+                        <p class="arrow">more</p> 
+                    <% } %>
+                </footer>
+            </article>           
+        <% }) %>
     </div>
+    <% if(page.total > 1) { %> 
+        <nav class="paginator">
+            <%- paginator({prev_text:"&laquo;",next_text:"&raquo;"}) %>
+        </nav>    
+    <% } %>
 </div>

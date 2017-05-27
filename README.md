@@ -1,5 +1,2 @@
-简介:
-   coolsimple, 中文名"简酷";
-   主要的目标: 
-      (1)简约
-      (2)最好的支持复杂的数学公式(微积分，矩阵等)
+oTaKu: Blog Website
+status: developing

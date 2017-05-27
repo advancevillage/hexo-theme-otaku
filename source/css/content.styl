@@ -7,14 +7,89 @@
 .leftsidebar
   float: left;
   width: 20%;
-  border: thin solid green;
   
 .rightsidebar
   float: right;
   width: 20%;
-  border: thin solid green;
   
 .main
   margin-left: 20%;
   margin-right: 20%;
-  border: thin solid blue;
+  border-left: thin solid #808080;
+  border-right: thin solid #808080;
+  
+  
+.article
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 4%;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+.header
+ margin: 0pt 5pt 5pt 5pt;
+ padding: 10pt 0pt 0pt 0pt;
+ border-bottom: thin solid #808080;
+ height: 50pt;
+.header > p
+ font-size: xx-large;
+.header > ul
+ list-style: none;
+.header > ul > li
+ float: left;
+ margin-right: 10%;
+ margin-left: 5%;
+ margin-top: 5pt;
+.articledate:before
+ content: url(/images/article/date16v3.png);
+ margin-right: 5pt;
+.articletag:before
+ content: url(/images/article/tag16v3.png);
+ margin-right: 5pt;
+.articlecategory:before
+ content: url(/images/article/category16v3.png);
+ margin-right: 5pt;
+ 
+.footer
+ margin: 5pt;
+ height: 30pt;
+/* border-bottom: thin solid #808080; */
+.footer > p
+ margin-top: 10pt;
+ margin-left: 5%;
+ font-weight: bold;
+ font-size: large;
+.arrow:before
+ content: url(/images/article/arrow12v3.png);
+ margin-right: 5pt;
+ 
+.section
+ margin-top: 10pt;
+ margin-bottom: 10pt;
+ margin-left: 2%;
+ margin-right: 2%;
+ font-size: large;
+ 
+.paginator
+ margin-left: 20%;
+ margin-right: 20%;
+ font-size: large;
+ font-weight: bold;
+ font-family: monospace;
+ border-top: thin solid #808080;
+ 
+.page-number
+ margin-left: 2%;
+ margin-right: 2%; 
+ color: #000000;
+a.extend.next
+ float: right;
+ color: green;
+ font-size: x-large;
+a.extend.prev
+ float: left;
+ font-size: x-large;
+ color: green;
+ margin-right: 30%;
+span.page-number.current
+ color: #ff0000;

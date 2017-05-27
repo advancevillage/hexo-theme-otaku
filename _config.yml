@@ -16,3 +16,9 @@ since: 2016
 
 #content
 excerpt_link: more
+
+#social
+social:
+    Github: https://github.com/advancevillage/hexo-theme-otaku
+    Blog: http://localhost:4000
+    Author: http://localhost:4000

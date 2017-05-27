@@ -1,0 +1,12 @@
+<div class="info">
+    <div class="social">
+        <% if(theme.social) { %> 
+           <% for(var name in theme.social) { %>
+            <p class="socialitem"><a class="socialitem<%= name %>" href="<%= theme.social[name] %>"><%= name %></a></p>
+            <% } %>
+        <% } %>
+    </div>
+    <div class="copyright">
+        <p>&copy;Copyright 2017, SUN-HE</p>
+    </div>
+</div>
