@@ -1,1 +1,19 @@
-Welcome to page
+<div class="wrapper">
+    <div class="rightsidebar"></div>
+    <div class="leftsidebar"></div>
+    <div class="pagemain">      
+       <% if(page.type == "tags") { %> 
+            <div class="pagetags">
+                 <% if(site.tags.length) { %> 
+                    <%- tagcloud({min_font: 20, max_font: 50, unit: 'pt', amount: 200, color: true, start_color: '#0000ff', end_color: '#000011'}) %>
+                <% } %>  
+            </div>        
+       <% } %>
+       <% if(page.type == "categories") { %> 
+            <div class="pagecategories">
+                <%- list_categories() %>
+            </div>
+       <% } %>
+
+    </div>
+</div>
