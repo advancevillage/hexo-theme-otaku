@@ -1,1 +1,33 @@
-Welcome to tag
+<div class="wrapper">
+    <div class="rightsidebar"></div>
+    <div class="leftsidebar"></div>
+    <div class="main">
+        <% page.posts.each(function(post){ %>
+            <article class="article">
+                <header class="header">
+                    <p><a href="<%- url_for(post.path) %>"><%= post.title%></a>a</p>
+                    <ul>
+                        <li class="articledate"><%- date(post.date, 'YYYY-MM-DD') %></li>
+                        <li class="articletag"><% post.tags.each(function(tag){ %> <%= tag.name %> <% }) %></li>
+                        <li class="articlecategory"><% post.categories.each(function(category){ %> <%= category.name %> <% }) %></li>
+                    </ul>  
+                </header>
+                <section class="section">
+                    <%- post.excerpt %>
+                </section>
+                <footer class="footer">
+                    <% if(theme.excerpt_link) { %> 
+                    <p class="arrow"><a href="<%- url_for(post.path) %>"><%= theme.excerpt_link%></a></p>
+                    <% } else { %>
+                    <p class="arrow"><a href="<%- url_for(post.path) %>">more</a></p> 
+                    <% } %>
+                </footer>
+            </article>           
+        <% }) %>
+    </div>
+    <% if(page.total > 1) { %> 
+        <nav class="paginator">
+            <%- paginator({prev_text:"&laquo;",next_text:"&raquo;"}) %>
+        </nav>    
+    <% } %>
+</div>
