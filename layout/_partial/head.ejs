@@ -6,6 +6,11 @@
 <% if(theme.favicon) { %>
     <link rel="icon" href="<%= theme.favicon %>"/>
 <% } %>
+<% if(config.title) { %> 
+    <title><%= config.title %></title>
+<% } else { %> 
+    <title>oTaKu</title>
+<% } %>
 <%- css('css/otaku.css') %>
 <%- css('css/content.css') %>
 <%- css('css/archive.css') %>
