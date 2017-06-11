@@ -3,11 +3,3 @@ menu:
 	categories: categories
 	tags: tags
 	archives: archives
-	
-copy:
-	declare: All copyrights belong to the original anthor!
-	author: Author
-	
-indexpage:
-	prev: prev
-	next: next

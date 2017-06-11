@@ -11,7 +11,7 @@
         <ul>
             <% for(var name in theme.menu) { %> 
                 <li class="site_nav_item site_nav_item_<%= name%>">
-                    <a href="<%- url_for(theme.menu[name])%>"><%= name %></a>
+                    <a href="<%- url_for(theme.menu[name])%>"><%= __('menu.'+name) %></a>
                 </li>
             <% } %>
         </ul>
