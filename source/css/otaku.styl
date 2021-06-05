@@ -1,121 +1,28 @@
-body,h1,h2,h3,h4,h5,h6,p,ul,ol,hr{
-    margin: 0;
-    padding: 0;
-}
-body
-  background: #d0d0d0;
-
-a
- text-decoration: none
-
-/* body */
-#site_header
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  width: auto;
-  height: auto;
-  border: thin solid black;
-  position: relative;
-  background: black;
+  overflow: hidden; 
+}
 
-  
-/* header */
-.logo
-  margin: 5pt;
-  height: 60%;
-  min-width: 300pt;
-  border-bottom: thin solid white;
-  
-.logoimg
-  margin-left: 20%;
-  margin-right: 10%;
-    
-.motto
-  float: right;
-  padding-top: 30pt;
-  color: white;
-  font: normal x-large bold monospace;
-  
-.site_nav
-  margin-left: 20%;
-  margin-right: 10%;
-  min-height: 50pt;
-  
-.site_nav ul
-  list-style: none;
-    
-    
-.site_nav_item
+a {
+  text-decoration: none;
+}
+
+.sky-gradient {
+  position: relative;
   float: left;
-  margin: 15pt 5%;
-  font: normal x-large bold monospace;
-  
-.site_nav_item a
-  color: white;
-  
-.site_nav_item_home
-  background: black;
-  
-.site_nav_item_home a:before
-  content: url(/images/home.png);
-  margin-right: 5pt;
-.site_nav_item_archives a:before
-  content: url(/images/archive.png)
-  margin-right: 5pt;
-.site_nav_item_tags a:before
-  content: url(/images/tag.png)
-  margin-right: 5pt;
-.site_nav_item_categories a:before
-  content: url(/images/category.png)
-  margin-right: 5pt;
-  
-#site_footer
- margin: 0;
- padding: 0;
-#site_footer > .info
- background: black;
-.social
- margin-left: 20%;
- margin-right: 20%;
- min-height: 30pt;
-.socialitem
- float: left;
- margin-top: 10pt;
- margin-left: 3%;
- margin-right: 3%;
- font-size: large;
- font-weight: bold;
-.socialitem > a
- color: white;
-.socialitemGithub:before
- content: url(/images/social/github16.png);
- margin-right: 5pt;
-.socialitemBlog:before
- content: url(/images/social/blog16.png);
- margin-right: 5pt;
-.socialitemCsdn:before
- content: url(/images/social/csdn16.png);
- margin-right: 5pt;
-.socialitemAuthor:before
- content: url(/images/social/author16.png);
-.socialitemWeibo:before
- content: url(/images/social/weibo16.png);
-.socialitemEmail:before
- content: url(/images/social/email16.png);
-.socialitemPhone:before
- content: url(/images/social/phone16.png);
- margin-right: 5pt;
-.copyright
- margin-left: 40%;
- margin-right: 40%;
- font-size: medium;
- font-weight: bold;
- font-family: monospace;
- color: white;
- 
-  
-  
-  
-  
-    
-  
+  width: 100%;
+  height: 100%;
+  transition: box-shadow 150ms, z-index 0ms;
+  background: linear-gradient(to bottom, #1e528e 0%, #265889 50%, #9da671 100%);
+}
+
+.sun{
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  box-shadow: 0px 0px 100px #FFFF00;
+  background: radial-gradient(circle at center, red, gold);
+}

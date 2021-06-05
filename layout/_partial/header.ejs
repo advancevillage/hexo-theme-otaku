@@ -1,19 +1,14 @@
-<div class="logo">
-    <div class="logoimg">
-        <img src="/images/logo96.png" alt="logo"/>
-        <% if(theme.motto) { %>
-            <div class="motto"><b><%= theme.motto %></b></div>
+<div class="header_container">
+    <div class="sun"></div>
+    <nav class="header_nav">
+        <% if(theme.menu) { %>
+            <ul>
+                <% for(var name in theme.menu) { %> 
+                    <li class="header_nav_item">
+                        <a href="<%- url_for(theme.menu[name])%>"><%= __('menu.'+name) %></a>
+                    </li>
+                <% } %>
+            </ul>
         <% } %>
-    </div>    
+    </nav>
 </div>
-<nav class="site_nav">
-    <% if(theme.menu) { %>
-        <ul>
-            <% for(var name in theme.menu) { %> 
-                <li class="site_nav_item site_nav_item_<%= name%>">
-                    <a href="<%- url_for(theme.menu[name])%>"><%= __('menu.'+name) %></a>
-                </li>
-            <% } %>
-        </ul>
-    <% } %>
-</nav>

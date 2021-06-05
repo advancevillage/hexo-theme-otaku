@@ -5,23 +5,9 @@
         <% page.posts.each(function(post){ %>
             <article class="article">
                 <header class="header">
-                    <p><a href="<%- url_for(post.path) %>"><%= post.title%></a></p>
-                    <ul>
-                        <li class="articledate"><%- date(post.date, 'YYYY-MM-DD') %></li>
-                        <li class="articletag"><% post.tags.each(function(tag){ %> <%= tag.name %> <% }) %></li>
-                        <li class="articlecategory"><% post.categories.each(function(category){ %> <%= category.name %> <% }) %></li>
-                    </ul>  
+                    <p style="float: left;"><a href="<%- url_for(post.path) %>"><%= post.title%></a></p>
+                    <p style="float: right;"><%- date(post.date, 'YYYY-MM-DD') %></p>
                 </header>
-                <section class="section">
-                    <%- post.excerpt %>
-                </section>
-                <footer class="footer">
-                    <% if(theme.excerpt_link) { %> 
-                    <p class="arrow"><a href="<%- url_for(post.path) %>"><%= theme.excerpt_link%></a></p>
-                    <% } else { %>
-                    <p class="arrow"><a href="<%- url_for(post.path) %>">more</a></p> 
-                    <% } %>
-                </footer>
             </article>           
         <% }) %>
     </div>

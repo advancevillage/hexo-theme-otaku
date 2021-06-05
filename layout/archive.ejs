@@ -2,16 +2,6 @@
     <div class="rightsidebar"></div>
     <div class="leftsidebar"></div>
     <div class="archivemain">
-        <% page.posts.each(function(post){ %>
-           <div class="archiveitem">
-                <span class="archiveitemtitle"><a href="<%- url_for(post.path) %>"><%= post.title%></a></span> 
-                <span class="archiveitemdate"><%- date(post.date, "YYYY-MM-DD") %></span>               
-           </div>
-        <% }) %>
+        <%= config.description %>
     </div>
-    <% if(page.total > 1) { %> 
-        <nav class="archivepaginator">
-            <%- paginator({prev_text:"&laquo;",next_text:"&raquo;"}) %>
-        </nav>    
-    <% } %>
 </div>
